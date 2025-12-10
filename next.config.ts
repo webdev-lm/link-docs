@@ -3,10 +3,8 @@ import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {},
   /* config options here */
 };
 
-const payloadConfig = withPayload(nextConfig)
-
-payloadConfig.turbopack = undefined
-export default payloadConfig
+export default withPayload(nextConfig);
