@@ -6,4 +6,7 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
-export default withPayload(nextConfig);
+const payloadConfig = withPayload(nextConfig)
+
+payloadConfig.turbopack = undefined
+export default payloadConfig
