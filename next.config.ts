@@ -1,10 +1,11 @@
-import { withPayload } from "@payloadcms/next/withPayload";
+import { withPayload } from '@payloadcms/next/withPayload'
 
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  turbopack:{},
+  // Your Next.js config here
+}
 
-const nextConfig: NextConfig = {
-  turbopack: {},
-  /* config options here */
-};
-
-export default withPayload(nextConfig);
+// Make sure you wrap your `nextConfig`
+// with the `withPayload` plugin
+export default withPayload(nextConfig) 
