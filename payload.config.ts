@@ -10,6 +10,7 @@ import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Guideline } from './collections/Guideline'
+import { AzureTransport } from './lib/azure-transport'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -39,6 +40,21 @@ export default buildConfig({
     defaultFromAddress: process.env.SMTP_FROM_ADDRESS || 'noreply@linkmobility.com',
     defaultFromName: process.env.SMTP_FROM_NAME || 'Link Graph',
     transport: (() => {
+      // Use Azure Microsoft Graph API if Azure credentials are provided
+      if (process.env.AZURE_CLIENT_ID && process.env.AZURE_CLIENT_SECRET && process.env.AZURE_TENANT_ID) {
+        console.log('[Email] Using Azure Microsoft Graph API transport')
+        return nodemailer.createTransport(
+          new AzureTransport({
+            clientId: process.env.AZURE_CLIENT_ID,
+            clientSecret: process.env.AZURE_CLIENT_SECRET,
+            tenantId: process.env.AZURE_TENANT_ID,
+            saveToSentItems: process.env.AZURE_SAVE_TO_SENT_ITEMS !== 'false',
+          }),
+        )
+      }
+
+      // Fall back to SMTP transport
+      console.log('[Email] Using SMTP transport')
       const port = parseInt(process.env.SMTP_PORT || '587', 10)
       const isSecurePort = port === 465
       // For Office365/Outlook:
@@ -66,9 +82,6 @@ export default buildConfig({
         greetingTimeout: 10000,
         socketTimeout: 10000,
       }
-      
-      // Log transport config
-
       
       const transport = nodemailer.createTransport(transportConfig)
       

@@ -1,164 +1,426 @@
-:root {
-  --font-mono: 'Roboto Mono', monospace;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
 
-html {
-  font-size: 18px;
-  line-height: 32px;
-
-  background: rgb(0, 0, 0);
-  -webkit-font-smoothing: antialiased;
-}
-
-html,
-body,
-#app {
-  height: 100%;
-}
-
-body {
-  font-family: system-ui;
-  font-size: 18px;
-  line-height: 32px;
-
-  margin: 0;
-  color: rgb(1000, 1000, 1000);
-
-  @media (max-width: 1024px) {
-    font-size: 15px;
-    line-height: 24px;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 74% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 72% 11%;
+    --popover: 214 46% 98%;
+    --popover-foreground: 224 74% 9%;
+    --primary-light: 225.33 51.72% 17.06%;
+    --primary: 224.29 72.41% 11.37%;
+    --primary-dark: 225 81.82% 8.63%;
+    --primary-foreground: 214 46% 98%;
+    --secondary: 213.75 72.73% 95.69%;
+    --secondary-foreground: 224 72% 11%;
+    --channel-green: 105 92.31% 94.9%;
+    --channel-green-foreground:173.1 86.14% 19.8%;
+    --channel-red:8.18 100% 95.69%;
+    --channel-red-foreground:20 81.82% 49.61%;
+    --channel-yellow:39.38 100% 93.73%;
+    --channel-yellow-foreground: 40.45 100% 43.92%;
+    --muted: 214 15% 66%;
+    --muted-foreground: 224 20% 40%;
+    --accent: 206 88% 49%;
+    --accent-light: 206 88% 75%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 358 100% 38%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 212 41% 85%;
+    --input: 0 0% 89.8%;
+    --ring: 206 88% 49%;
+    --chart-1:206 88% 49%;
+    --chart-2: 206 88% 60%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 224 72% 11%; 
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 206 88% 49%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 26% 94%;
+    --sidebar-accent-foreground: 224 74% 9%;
+    --sidebar-border: 212 41% 85%;
+    --sidebar-ring: 212 41% 85%;
   }
+  /* .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+        --accent-light: 206 88% 58%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  } */
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.redoc-container .showHide {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.redoc-wrap .description table {
   display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap; /* Ensures table cells don't wrap ugly, making horizontal scroll clean */
 }
 
-h1 {
-  margin: 40px 0;
-  font-size: 64px;
-  line-height: 70px;
-  font-weight: bold;
+/*
+ * 2. Fix for long, unbroken strings in code samples or schemas.
+ * This forces long strings to wrap within their container.
+*/
+.redoc-wrap pre,
+.redoc-wrap code {
+  white-space: pre-wrap !important; /* Allows wrapping of pre-formatted text */
+  word-break: break-all;      /* Breaks any word/string that is too long */
+}
 
-  @media (max-width: 1024px) {
-    margin: 24px 0;
-    font-size: 42px;
-    line-height: 42px;
+.token.keyword {
+  color: #0F8CEB !important;
+}
+
+.token.string {
+  color: #ECF3FC !important;
+}
+
+.lucide {
+  stroke-width: 1.5;
+}
+
+.lucide * {
+  vector-effect: non-scaling-stroke;
+}
+
+
+
+/* GENERAL */
+@layer base {
+
+  /* svg {
+    width: 16px;
+    height:16px
+  } */
+
+.toaster {
+    @apply  !bg-white !text-primary shadow-lg;
   }
 
-  @media (max-width: 768px) {
-    font-size: 38px;
-    line-height: 38px;
+  svg.showHide {
+      display: inline-block;
+      width: 16px;
+    height:16px;
   }
 
-  @media (max-width: 400px) {
-    font-size: 32px;
-    line-height: 32px;
+  * {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 112px;
+  }
+
+  .primary > h1,.primary >h2,.primary >h3,.primary >h4 {
+    @apply !text-white
+  }
+
+  h1,h2,h3,h4 {
+   @apply font-bold pb-6 text-primary leading-normal
+  }
+  h1 {
+    @apply text-6xl 
+  }
+  h2 {
+    @apply text-2xl
+  }
+  h3 {
+    @apply text-xl 
+  }
+  h4 {
+    @apply text-lg 
+  }
+
+  /* p{
+    @apply text-primary/95
+  } */
+}
+
+/* ATOMS */
+@layer base {
+  
+  .link {
+    @apply underline underline-offset-4 hover:text-accent hover:decoration-accent
+  }
+
+  a, .link-transition {
+    @apply transition-colors duration-200;
+  }
+
+
+  .link-accent {
+    @apply inline text-base items-center text-primary space-x-2 underline underline-offset-4 decoration-primary hover:text-accent hover:decoration-accent
+  }
+
+  .message-flow-typo {
+    @apply text-sm
+  }
+
+  .hljs-string {
+    @apply text-blue-600
+  }
+
+  li.icon-list-item > span > p{
+    @apply !pb-2
+  }
+  li.icon-list-item > div > p{
+    @apply !pb-2
   }
 }
 
-p {
-  margin: 24px 0;
+/* PAGES */
+@layer base {
+  .section {
+    @apply py-8 md:py-16 xl:py-28
+  }
 
-  @media (max-width: 1024px) {
-    margin: calc(var(--base) * 0.75) 0;
+    .section-blog {
+    @apply py-4 md:py-12 xl:py-16
+  }
+
+  .section-typo-layout {
+    @apply pr-0 md:pr-16 xl:pr-32 space-y-0
+  }
+
+  .section-typo-layout-1-3 {
+    @apply pr-0 md:pr-16 space-y-2
+  }
+
+  .section-heading {
+    @apply text-xs lg:text-sm pb-2 font-normal !text-accent
+  }
+
+  .section-hook {
+    @apply text-4xl lg:text-5xl font-bold pb-0 leading-tight
+  }
+
+    .section-hook-child {
+    @apply text-xl text-balance lg:text-2xl font-bold pb-0 
+  }
+
+  .section-hook > p {
+    @apply leading-none
+  }
+
+  .section-paragraph {
+    @apply !pb-0 mt-0
+  }
+
+  .content-wrapper {
+    @apply max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto px-4
   }
 }
 
-a {
-  color: currentColor;
-
-  &:focus {
-    opacity: 0.8;
-    outline: none;
+/* BLOG */
+@layer base {
+  .content-wrapper-blog {
+    @apply max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto px-4
   }
 
-  &:active {
-    opacity: 0.7;
-    outline: none;
+  .blog-segment p {
+    @apply text-primary/95
+  }
+
+  .blog-segment strong {
+    @apply text-primary/95
+  }
+
+  .blog-segment :last-child {
+    @apply !pb-0
+  }
+
+  /* .text-intend-blog {
+    @apply pl-0 lg:pl-6 pr-4 lg:pr-16
+  } */
+
+  blockquote > .text-intend-blog {
+    @apply pl-0 pr-0
+    
+  }
+
+  .blog-image {
+    @apply rounded-md lg:-m-4 lg:my-2
+  }
+
+
+
+  .blog-table-wrapper > table {
+    @apply table-auto border border-gray-200 rounded-md bg-gray-50  text-sm
+  }
+
+  .blog-table-wrapper > table > thead > tr {
+    @apply border-b border-gray-200;
+  }
+
+  .blog-table-wrapper > table > thead > tr > th:not(:last-child),
+  .blog-table-wrapper > table > tbody > tr > td:not(:last-child) {
+    @apply border-r border-gray-200;
+  }
+
+  .blog-table-wrapper > table > thead > tr > th{
+    @apply p-4
+  }
+  .blog-table-wrapper > table > tbody > tr > td{
+    @apply p-4
+  }
+
+  .blog-table-wrapper > table > tbody > tr:nth-child(odd) {
+    @apply bg-gray-100;
+  }
+
+ .last-pb-none p:last-child, ol:last-child, ul:last-child {
+    @apply !pb-0
+  }
+  
+  .blog-note p:last-child {
+    @apply !pb-0
+  }
+
+  .blog-list li:last-child {
+    @apply !pb-0
+  }
+
+
+  .blog-list {
+    @apply m-0 p-0 ;
+  }
+  
+  ul.blog-list {
+    @apply  list-disc list-outside ms-4 ;
+  }
+  
+  ul.blog-list li {
+    @apply relative pl-0 text-primary/50 ;
+  }
+  
+  ol.blog-list {
+    @apply  list-decimal list-outside ms-4;
+  }
+
+  ol.blog-list li {
+    @apply relative pl-0 text-primary/50;
+  }
+
+  hr {
+    @apply pb-6 pt-2 border-none
   }
 }
 
-svg {
-  vertical-align: middle;
+
+
+
+/* Apps */
+@layer base {
+  .typo-app h1  {
+    @apply text-3xl
+  }
+
+  .typo-app p  {
+    @apply pr-4 xl:pr-16 text-base 
+  }
+
+  .typo-app h1, h2, h3, h4  {
+    @apply pb-4
+  }
+
+  .docs * {
+    @apply text-white !important;
+  }
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  padding: 45px;
-  max-width: 1024px;
-  margin: 0 auto;
-  overflow: hidden;
+/* Message Container */
 
-  @media (max-width: 400px) {
-    padding: 24px;
+@layer base {
+ 
+}
+
+
+/* Website */
+@layer base {
+  * {
+    @apply outline-ring/50;
   }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-
-    h1 {
-      text-align: center;
-    }
+  body {
+    @apply bg-background text-foreground;
   }
+}
 
-  .links {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    a {
-      text-decoration: none;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-    }
-
-    .admin {
-      color: rgb(0, 0, 0);
-      background: rgb(1000, 1000, 1000);
-      border: 1px solid rgb(0, 0, 0);
-    }
-
-    .docs {
-      color: rgb(1000, 1000, 1000);
-      background: rgb(0, 0, 0);
-      border: 1px solid rgb(1000, 1000, 1000);
-    }
+/* Cookiebot */
+@layer base {
+  .CookieDeclarationType {
+    @apply !border-none
   }
+  
+  div.component-list-item > p {
+  @apply !pb-2
+}
 
-  .footer {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+}
 
-    @media (max-width: 1024px) {
-      flex-direction: column;
-      gap: 6px;
-    }
+.hero-animated {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear infinite;
+}
 
-    p {
-      margin: 0;
-    }
 
-    .codeLink {
-      text-decoration: none;
-      padding: 0 0.5rem;
-      background: rgb(60, 60, 60);
-      border-radius: 4px;
-    }
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
   }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.book-meeting td, th {
+  @apply !w-10 !h-10
+}
+
+.book-meeting td > button {
+  @apply !w-10 !h-10
 }

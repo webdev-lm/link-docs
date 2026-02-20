@@ -1,0 +1,28 @@
+{
+  "header": "Product Guides",
+  "groups": [
+    {
+      "label": "Getting Started",
+      "items": [
+        {
+          "title": "Introduction",
+          "href": "/product-guides/introduction"
+        },
+        {
+          "title": "Quick Start Guide",
+          "href": "/product-guides/quick-start"
+        },
+        {
+          "title": "Installation",
+          "href": "/product-guides/installation"
+        },
+        {
+          "title": "Configuration",
+          "href": "/product-guides/configuration"
+        }
+      ]
+    }
+  ]
+}
+
+

@@ -1,0 +1,28 @@
+{
+  "header": "Regulatory Guidelines",
+  "groups": [
+    {
+      "label": "Compliance",
+      "items": [
+        {
+          "title": "GDPR Requirements",
+          "href": "/regulatory-guidelines/gdpr"
+        },
+        {
+          "title": "HIPAA Compliance",
+          "href": "/regulatory-guidelines/hipaa"
+        },
+        {
+          "title": "PCI DSS Standards",
+          "href": "/regulatory-guidelines/pci-dss"
+        },
+        {
+          "title": "SOC 2 Framework",
+          "href": "/regulatory-guidelines/soc2"
+        }
+      ]
+    }
+  ]
+}
+
+
