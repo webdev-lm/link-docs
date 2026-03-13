@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# migration script output (optional: remove to commit guideline JSONs)
+/scripts/migrations-output/*.json
+/scripts/migrations-output/*.error.json
+scrape-errors.log
+/scripts/migrations-output/*.json
+/scripts/migrations-output/*.error.json
+scrape-errors.log
+
+# Confluence auth (do not commit)
+/scripts/data/confluence-state.json

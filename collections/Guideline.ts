@@ -81,10 +81,6 @@ export const Guideline: CollectionConfig = {
       },
     },
     {
-      name: 'description',
-      type: 'richText',
-    },
-    {
       name: 'localeSummary',
       type: 'group',
       label: 'Locale Summary',
@@ -119,6 +115,37 @@ export const Guideline: CollectionConfig = {
 
       ],
     },
+    {
+      name: 'regulatoryRequirements',
+      type:'group',
+      label: 'Sender Id Registration Regulations',
+      fields: [
+        {
+          name: 'requirementsSelection',
+          type: 'select',
+          label: 'Registration Requirement Selection',
+          options: [
+            {
+              label: 'No Sender Id Registration',
+              value: 'noReg',
+            },
+              {
+                label: 'Optional Sender Id Registration',
+                value: 'optReg',
+              },
+              {
+                label: 'Mandatory Sender Id Registration',
+                value: 'mandReg',
+              },
+          ],
+        }
+      ]
+    },
+    {
+      name: 'description',
+      type: 'richText',
+    },
+
     {
       name: 'localOperators',
       type: 'array',
@@ -177,62 +204,26 @@ export const Guideline: CollectionConfig = {
               name: 'dedicatedShortcodes',
               type: 'checkbox',
               label: 'Dedicated Shortcodes',
-              defaultValue: false,
+              defaultValue: true,
             },        {
               name: 'sharedShortcodes',
               type: 'checkbox',
               label: 'Shared Shortcodes',
-              defaultValue: false,
+              defaultValue: true,
             },
             {
               name: 'longnumbers',
               type: 'checkbox',
               label: 'Longnumbers',
-              defaultValue: false,
+              defaultValue: true,
             },
- 
-            {
-              name: 'mms',
-              type: 'checkbox',
-              label: 'MMS',
-              defaultValue: false,
-            },
-            {
-              name: 'messageLength',
-              type: 'number',
-              label: 'Message Length',
-            }
+
           ]
         },
 
       ],
     },
-    {
-      name: 'regulatoryRequirements',
-      type:'group',
-      label: 'Sender Id Registration Regulations',
-      fields: [
-        {
-          name: 'requirementsSelection',
-          type: 'select',
-          label: 'Registration Requirement Selection',
-          options: [
-            {
-              label: 'No Sender Id Registration',
-              value: 'noReg',
-            },
-              {
-                label: 'Optional Sender Id Registration',
-                value: 'optReg',
-              },
-              {
-                label: 'Mandatory Sender Id Registration',
-                value: 'mandReg',
-              },
-          ],
-        }
-      ]
-    }
+
   ],
 }
 

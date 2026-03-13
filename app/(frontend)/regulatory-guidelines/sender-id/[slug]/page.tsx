@@ -1,6 +1,12 @@
 import { notFound } from 'next/navigation'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
+import { Label } from '@/components/ui/label'
+import LocaleSummary from './_components/LocaleSummary'
+import OperatorTable from './_components/OperatorTable'
+import AvailableShortcodes from './_components/AvailableShortcodes'
+import SenderIdRegulations from './_components/SenderIdRegulations'
+import { RichText } from '@/_components/_atoms/_richtext/RichText'
 
 interface PageProps {
   params: Promise<{
@@ -11,6 +17,28 @@ interface PageProps {
 interface Guideline {
   title: string
   slug: string
+  localeSummary: {
+    locale: string
+    countryISO: string
+    dialingCode: number
+    countryCode: number
+  }
+  localOperators: {
+    operator: string
+    mnc: number
+    numericId: boolean
+    alphaId: boolean
+    shortCode: boolean
+  }[]
+  features: {
+    dedicatedShortcodes: boolean
+    sharedShortcodes: boolean
+    longnumbers: boolean
+  } 
+  regulatoryRequirements: {
+    requirementsSelection: string
+  }
+  description: string
 }
 
 export default async function GuidelineSlugPage({ params }: PageProps) {
@@ -29,6 +57,11 @@ export default async function GuidelineSlugPage({ params }: PageProps) {
     select: {
       title: true,
       slug: true,
+      localeSummary:true,
+      localOperators:true,
+      features:true,
+      regulatoryRequirements:true,
+      description:true,
     },
     limit: 1,
   })
@@ -38,11 +71,15 @@ export default async function GuidelineSlugPage({ params }: PageProps) {
   }
 
   const guideline = result.docs[0] as Guideline
-
+  console.log(guideline)
   return (
-    <div>
+    <div className='typo-app max-w-screen-lg mx-auto space-y-8'>
       <h1>{guideline.title}</h1>
-      <p>Slug: {guideline.slug}</p>
+      <LocaleSummary localeSummary={guideline.localeSummary as any} />
+      <SenderIdRegulations regulatoryRequirements={guideline.regulatoryRequirements as any} />
+      <RichText data={guideline.description as any} />
+      <OperatorTable localOperators={guideline.localOperators as any} />
+      <AvailableShortcodes features={guideline.features as any} />
     </div>
   )
 }

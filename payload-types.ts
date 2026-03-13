@@ -69,16 +69,24 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    guidelines: Guideline;
     'payload-kv': PayloadKv;
+    'payload-folders': FolderInterface;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  collectionsJoins: {};
+  collectionsJoins: {
+    'payload-folders': {
+      documentsAndFolders: 'payload-folders' | 'guidelines';
+    };
+  };
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    guidelines: GuidelinesSelect<false> | GuidelinesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
+    'payload-folders': PayloadFoldersSelect<false> | PayloadFoldersSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -160,6 +168,87 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "guidelines".
+ */
+export interface Guideline {
+  id: string;
+  title: string;
+  /**
+   * Auto-generated from title, but can be edited manually
+   */
+  slug?: string | null;
+  localeSummary?: {
+    locale?: string | null;
+    countryISO?: string | null;
+    dialingCode?: number | null;
+    countryCode?: number | null;
+  };
+  regulatoryRequirements?: {
+    requirementsSelection?: ('noReg' | 'optReg' | 'mandReg') | null;
+  };
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  localOperators?:
+    | {
+        operator?: string | null;
+        mnc?: number | null;
+        numericId?: boolean | null;
+        alphaId?: boolean | null;
+        shortCode?: boolean | null;
+        comments?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  features?: {
+    dedicatedShortcodes?: boolean | null;
+    sharedShortcodes?: boolean | null;
+    longnumbers?: boolean | null;
+  };
+  folder?: (string | null) | FolderInterface;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-folders".
+ */
+export interface FolderInterface {
+  id: string;
+  name: string;
+  folder?: (string | null) | FolderInterface;
+  documentsAndFolders?: {
+    docs?: (
+      | {
+          relationTo?: 'payload-folders';
+          value: string | FolderInterface;
+        }
+      | {
+          relationTo?: 'guidelines';
+          value: string | Guideline;
+        }
+    )[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
+  folderType?: 'guidelines'[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -189,6 +278,18 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: string | Media;
+      } | null)
+    | ({
+        relationTo: 'guidelines';
+        value: string | Guideline;
+      } | null)
+    | ({
+        relationTo: 'payload-kv';
+        value: string | PayloadKv;
+      } | null)
+    | ({
+        relationTo: 'payload-folders';
+        value: string | FolderInterface;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -274,11 +375,66 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "guidelines_select".
+ */
+export interface GuidelinesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  localeSummary?:
+    | T
+    | {
+        locale?: T;
+        countryISO?: T;
+        dialingCode?: T;
+        countryCode?: T;
+      };
+  regulatoryRequirements?:
+    | T
+    | {
+        requirementsSelection?: T;
+      };
+  description?: T;
+  localOperators?:
+    | T
+    | {
+        operator?: T;
+        mnc?: T;
+        numericId?: T;
+        alphaId?: T;
+        shortCode?: T;
+        comments?: T;
+        id?: T;
+      };
+  features?:
+    | T
+    | {
+        dedicatedShortcodes?: T;
+        sharedShortcodes?: T;
+        longnumbers?: T;
+      };
+  folder?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
   key?: T;
   data?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-folders_select".
+ */
+export interface PayloadFoldersSelect<T extends boolean = true> {
+  name?: T;
+  folder?: T;
+  documentsAndFolders?: T;
+  folderType?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

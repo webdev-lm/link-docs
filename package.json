@@ -8,7 +8,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate:importmap": "payload generate:importmap"
+    "generate:importmap": "payload generate:importmap",
+    "migrate:scrape": "tsx scripts/scrape-guidelines/run-scrape.ts",
+    "migrate:scrape-markdown": "tsx scripts/scrape-guidelines/run-scrape-markdown.ts",
+    "migrate:fetch-confluence": "tsx scripts/scrape-guidelines/fetch-confluence-api.ts",
+    "migrate:transform-guidelines": "node --env-file=.env.local ./node_modules/tsx/dist/cli.mjs scripts/scrape-guidelines/transform-confluence-to-guidelines-llm.ts",
+    "migrate:seed-guidelines": "tsx scripts/seed-guidelines-payload.ts",
+    "generate:regulatory-sidebar": "tsx scripts/generate-regulatory-config.ts"
   },
   "dependencies": {
     "@azure/msal-node": "^5.0.4",
@@ -41,11 +47,16 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.24",
+    "cheerio": "^1.2.0",
     "cross-env": "^10.1.0",
+    "dotenv": "^16.4.5",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
+    "playwright": "^1.58.2",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
-    "typescript": "^5"
+    "tsx": "^4.21.0",
+    "typescript": "^5",
+    "xlsx": "^0.18.5"
   }
 }

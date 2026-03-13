@@ -1,4 +1,21 @@
 /**
+ * Converts a URL slug back to a human-readable label
+ * @param slug - The slug to unslugify (e.g. "sender-id", "regulatory-guidelines")
+ * @returns A formatted label (e.g. "Sender Id", "Regulatory Guidelines")
+ */
+export function unslugify(slug: string): string {
+  return slug
+    .replace(/[-_]+/g, " ") // Replace dashes/underscores with space
+    .replace(/[^a-zA-Z0-9 ]/g, "") // Remove other special characters
+    .replace(/\b\w/g, (char) => char.toUpperCase()) // Capitalize first letter of each word
+    .replace("Sms", "SMS")
+    .replace("Whatsapp", "WhatsApp")
+    .replace("Rcs", "RCS")
+    .replace("Api", "API")
+    .replace("Mylink", "MyLINK")
+}
+
+/**
  * Converts a string to a URL-friendly slug
  * @param text - The text to slugify
  * @returns A slugified string
@@ -41,4 +58,5 @@ export function makeUniqueSlug(baseSlug: string, existingSlugs: string[]): strin
 
   return uniqueSlug
 }
+
 

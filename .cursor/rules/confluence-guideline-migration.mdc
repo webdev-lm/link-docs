@@ -1,0 +1,79 @@
+---
+description: Confluence API fetch → Agent HTML-to-GuidelinePayload pipeline; input/output paths and mapping rules
+globs: scripts/**/*
+alwaysApply: false
+---
+
+# Confluence guideline migration pipeline
+
+When the user asks to **process Confluence pages into guidelines** or **run the Confluence migration pipeline**, follow this pipeline.
+
+## 1. Fetch step (run first)
+
+From project root, run:
+
+```bash
+npm run migrate:fetch-confluence
+# or: npx tsx scripts/scrape-guidelines/fetch-confluence-api.ts
+```
+
+- **Requires**: `CONFLUENCE_USER` and `CONFLUENCE_API_KEY` in `.env.local`.
+- **Optional**: `LIMIT=5` to process only the first N URLs.
+- **Output**: One file per page in `scripts/data/confluence-pages/{pageId}.json`. Each file has:
+  - `pageId` (string)
+  - `title` (string)
+  - `bodyHtml` (string, Confluence storage/view HTML)
+
+Failed pages are logged to `scripts/data/confluence-pages/fetch-errors.json`.
+
+## 2. Agent step (HTML → GuidelinePayload) — LLM pipeline
+
+**Run the script** (steps 2–4 in one go):
+
+```bash
+npm run migrate:transform-guidelines
+```
+
+- **Requires**: `OPENAI_API_KEY` in `.env.local`.
+- **Input**: Every JSON file in `scripts/data/confluence-pages/*.json` (excluding `fetch-errors.json`).
+- **Process**: For each page, the script sends the body HTML and title to an LLM (OpenAI). The LLM analyzes the content and returns a valid GuidelinePayload JSON. No client-side JavaScript or DOM extraction — analysis is done by the LLM.
+- **Output**: One file per guideline in `scripts/data/guidelines/{slug}.json`.
+
+**Type**: Each output file must be a valid `GuidelinePayload` (see `scripts/data/guideline-payload-type.ts` and `collections/Guideline.ts`).
+
+### Mapping rules
+
+1. **Title and slug**
+   - `title`: Use the page `title` from the JSON (required).
+   - `slug`: Generate from `title` using `lib/slugify.ts`. Must match `/^[a-z0-9]+(?:-[a-z0-9]+)*$/`.
+
+2. **Operator table** (Confluence HTML)
+   - Find tables (e.g. `<table class="confluenceTable">`) with header row and data rows.
+   - Columns to map: Operator, MCC, MNC, Numeric ID, Alpha ID, Short code, Comments.
+   - Map to `localOperators[]`: `operator`, `mnc` (number), `numericId`/`alphaId`/`shortCode` (boolean from "X"/"Yes"), `comments`.
+   - If a single MCC column exists, it can populate `localeSummary.countryCode`.
+
+3. **Sender ID registration requirements**
+   - Find the section (e.g. `<h2>` or heading + following `<p>`).
+   - Infer `regulatoryRequirements.requirementsSelection` from wording:
+     - "No registration…" / "not required" / "not possible" → `noReg`
+     - "Optional" → `optReg`
+     - "Mandatory" / "Required" → `mandReg`
+
+4. **Other fields**
+   - `localeSummary`: optional; fill from table/lookup if present (`locale`, `countryISO`, `dialingCode`, `countryCode`).
+   - `description`: optional; minimal Lexical JSON or null.
+   - `features`: optional (`dedicatedShortcodes`, `sharedShortcodes`, `longnumbers`); omit or use defaults.
+
+HTML structure can vary (extra wrappers, different table layouts). Handle variation; do not rely on a single rigid selector.
+
+### Validation
+
+- Required: `title`. Slug format and enum values must be valid.
+- Process in batches (e.g. 10–20 files) to stay within context.
+
+### References
+
+- `scripts/data/guideline-payload-type.ts` – `GuidelinePayload` and `SerializedLexicalState`
+- `scripts/README-MIGRATION-BRIEF.md` – sections 2 and 3 (target shape, Confluence layout)
+- `lib/slugify.ts` – slug from title
