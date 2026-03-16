@@ -2,7 +2,7 @@
   "header": "Regulatory Guidelines",
   "nav": [
     {
-      "groupLabel": "Sender ID",
+      "groupLabel": "SMS Sender ID",
       "id": "sms-sender-id",
       "items": [
         {
