@@ -19,14 +19,14 @@ export default async function RegulatoryGuidelinesMain() {
       <h1>Regulatory Guidelines</h1>
 
       <div className="grid gap-4 sm:grid-cols-2 min-h-[400px]">
-        <Link href="/regulatory-guidelines/sender-id" className="block">
+        <Link href="/regulatory-guidelines/sms-sender-id" className="block">
           <Card className="h-full transition-colors hover:bg-secondary">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle>Sender ID</CardTitle>
+              <CardTitle>SMS Sender ID</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Guidelines and requirements for sender ID registration.
+                Guidelines and requirements for SMS Sender ID registration.
               </p>
             </CardContent>
           </Card>

@@ -3,7 +3,7 @@
   "nav": [
     {
       "groupLabel": "Sender ID",
-      "id": "sender-id",
+      "id": "sms-sender-id",
       "items": [
         {
           "title": "Europe",
@@ -12,183 +12,183 @@
           "items": [
             {
               "title": "Albania",
-              "url": "/regulatory-guidelines/sender-id/albania"
+              "url": "/regulatory-guidelines/sms-sender-id/albania"
             },
             {
               "title": "Andorra",
-              "url": "/regulatory-guidelines/sender-id/andorra"
+              "url": "/regulatory-guidelines/sms-sender-id/andorra"
             },
             {
               "title": "Austria",
-              "url": "/regulatory-guidelines/sender-id/austria"
+              "url": "/regulatory-guidelines/sms-sender-id/austria"
             },
             {
               "title": "Belarus",
-              "url": "/regulatory-guidelines/sender-id/belarus"
+              "url": "/regulatory-guidelines/sms-sender-id/belarus"
             },
             {
               "title": "Belgium",
-              "url": "/regulatory-guidelines/sender-id/belgium"
+              "url": "/regulatory-guidelines/sms-sender-id/belgium"
             },
             {
               "title": "Bosnia and Herzegovina",
-              "url": "/regulatory-guidelines/sender-id/bosnia-and-herzegovina"
+              "url": "/regulatory-guidelines/sms-sender-id/bosnia-and-herzegovina"
             },
             {
               "title": "Bulgaria",
-              "url": "/regulatory-guidelines/sender-id/bulgaria"
+              "url": "/regulatory-guidelines/sms-sender-id/bulgaria"
             },
             {
               "title": "Croatia",
-              "url": "/regulatory-guidelines/sender-id/croatia"
+              "url": "/regulatory-guidelines/sms-sender-id/croatia"
             },
             {
               "title": "Cyprus",
-              "url": "/regulatory-guidelines/sender-id/cyprus"
+              "url": "/regulatory-guidelines/sms-sender-id/cyprus"
             },
             {
               "title": "Czech Republic",
-              "url": "/regulatory-guidelines/sender-id/czech-republic"
+              "url": "/regulatory-guidelines/sms-sender-id/czech-republic"
             },
             {
               "title": "Denmark",
-              "url": "/regulatory-guidelines/sender-id/denmark"
+              "url": "/regulatory-guidelines/sms-sender-id/denmark"
             },
             {
               "title": "Estonia",
-              "url": "/regulatory-guidelines/sender-id/estonia"
+              "url": "/regulatory-guidelines/sms-sender-id/estonia"
             },
             {
               "title": "Finland",
-              "url": "/regulatory-guidelines/sender-id/finland"
+              "url": "/regulatory-guidelines/sms-sender-id/finland"
             },
             {
               "title": "France",
-              "url": "/regulatory-guidelines/sender-id/france"
+              "url": "/regulatory-guidelines/sms-sender-id/france"
             },
             {
               "title": "Germany",
-              "url": "/regulatory-guidelines/sender-id/germany"
+              "url": "/regulatory-guidelines/sms-sender-id/germany"
             },
             {
               "title": "Greece",
-              "url": "/regulatory-guidelines/sender-id/greece"
+              "url": "/regulatory-guidelines/sms-sender-id/greece"
             },
             {
               "title": "Hungary",
-              "url": "/regulatory-guidelines/sender-id/hungary"
+              "url": "/regulatory-guidelines/sms-sender-id/hungary"
             },
             {
               "title": "Iceland",
-              "url": "/regulatory-guidelines/sender-id/iceland"
+              "url": "/regulatory-guidelines/sms-sender-id/iceland"
             },
             {
               "title": "Ireland",
-              "url": "/regulatory-guidelines/sender-id/ireland"
+              "url": "/regulatory-guidelines/sms-sender-id/ireland"
             },
             {
               "title": "Italy",
-              "url": "/regulatory-guidelines/sender-id/italy"
+              "url": "/regulatory-guidelines/sms-sender-id/italy"
             },
             {
               "title": "Latvia",
-              "url": "/regulatory-guidelines/sender-id/latvia"
+              "url": "/regulatory-guidelines/sms-sender-id/latvia"
             },
             {
               "title": "Liechtenstein",
-              "url": "/regulatory-guidelines/sender-id/liechtenstein"
+              "url": "/regulatory-guidelines/sms-sender-id/liechtenstein"
             },
             {
               "title": "Lithuania",
-              "url": "/regulatory-guidelines/sender-id/lithuania"
+              "url": "/regulatory-guidelines/sms-sender-id/lithuania"
             },
             {
               "title": "Luxembourg",
-              "url": "/regulatory-guidelines/sender-id/luxembourg"
+              "url": "/regulatory-guidelines/sms-sender-id/luxembourg"
             },
             {
               "title": "Malta",
-              "url": "/regulatory-guidelines/sender-id/malta"
+              "url": "/regulatory-guidelines/sms-sender-id/malta"
             },
             {
               "title": "Moldova",
-              "url": "/regulatory-guidelines/sender-id/moldova"
+              "url": "/regulatory-guidelines/sms-sender-id/moldova"
             },
             {
               "title": "Monaco",
-              "url": "/regulatory-guidelines/sender-id/monaco"
+              "url": "/regulatory-guidelines/sms-sender-id/monaco"
             },
             {
               "title": "Montenegro",
-              "url": "/regulatory-guidelines/sender-id/montenegro"
+              "url": "/regulatory-guidelines/sms-sender-id/montenegro"
             },
             {
               "title": "Netherlands",
-              "url": "/regulatory-guidelines/sender-id/netherlands"
+              "url": "/regulatory-guidelines/sms-sender-id/netherlands"
             },
             {
               "title": "North Macedonia",
-              "url": "/regulatory-guidelines/sender-id/north-macedonia"
+              "url": "/regulatory-guidelines/sms-sender-id/north-macedonia"
             },
             {
               "title": "Norway",
-              "url": "/regulatory-guidelines/sender-id/norway"
+              "url": "/regulatory-guidelines/sms-sender-id/norway"
             },
             {
               "title": "Poland",
-              "url": "/regulatory-guidelines/sender-id/poland"
+              "url": "/regulatory-guidelines/sms-sender-id/poland"
             },
             {
               "title": "Portugal",
-              "url": "/regulatory-guidelines/sender-id/portugal"
+              "url": "/regulatory-guidelines/sms-sender-id/portugal"
             },
             {
               "title": "Romania",
-              "url": "/regulatory-guidelines/sender-id/romania"
+              "url": "/regulatory-guidelines/sms-sender-id/romania"
             },
             {
               "title": "Russia",
-              "url": "/regulatory-guidelines/sender-id/russia"
+              "url": "/regulatory-guidelines/sms-sender-id/russia"
             },
             {
               "title": "San Marino",
-              "url": "/regulatory-guidelines/sender-id/san-marino"
+              "url": "/regulatory-guidelines/sms-sender-id/san-marino"
             },
             {
               "title": "Serbia",
-              "url": "/regulatory-guidelines/sender-id/serbia"
+              "url": "/regulatory-guidelines/sms-sender-id/serbia"
             },
             {
               "title": "Slovakia",
-              "url": "/regulatory-guidelines/sender-id/slovakia"
+              "url": "/regulatory-guidelines/sms-sender-id/slovakia"
             },
             {
               "title": "Slovenia",
-              "url": "/regulatory-guidelines/sender-id/slovenia"
+              "url": "/regulatory-guidelines/sms-sender-id/slovenia"
             },
             {
               "title": "Spain",
-              "url": "/regulatory-guidelines/sender-id/spain"
+              "url": "/regulatory-guidelines/sms-sender-id/spain"
             },
             {
               "title": "Sweden",
-              "url": "/regulatory-guidelines/sender-id/sweden"
+              "url": "/regulatory-guidelines/sms-sender-id/sweden"
             },
             {
               "title": "Switzerland",
-              "url": "/regulatory-guidelines/sender-id/switzerland"
+              "url": "/regulatory-guidelines/sms-sender-id/switzerland"
             },
             {
               "title": "Ukraine",
-              "url": "/regulatory-guidelines/sender-id/ukraine"
+              "url": "/regulatory-guidelines/sms-sender-id/ukraine"
             },
             {
               "title": "United Kingdom",
-              "url": "/regulatory-guidelines/sender-id/united-kingdom"
+              "url": "/regulatory-guidelines/sms-sender-id/united-kingdom"
             },
             {
               "title": "Vatican City",
-              "url": "/regulatory-guidelines/sender-id/vatican-city"
+              "url": "/regulatory-guidelines/sms-sender-id/vatican-city"
             }
           ]
         },
@@ -199,95 +199,95 @@
           "items": [
             {
               "title": "Antigua and Barbuda",
-              "url": "/regulatory-guidelines/sender-id/antigua-and-barbuda"
+              "url": "/regulatory-guidelines/sms-sender-id/antigua-and-barbuda"
             },
             {
               "title": "Bahamas",
-              "url": "/regulatory-guidelines/sender-id/bahamas"
+              "url": "/regulatory-guidelines/sms-sender-id/bahamas"
             },
             {
               "title": "Barbados",
-              "url": "/regulatory-guidelines/sender-id/barbados"
+              "url": "/regulatory-guidelines/sms-sender-id/barbados"
             },
             {
               "title": "Belize",
-              "url": "/regulatory-guidelines/sender-id/belize"
+              "url": "/regulatory-guidelines/sms-sender-id/belize"
             },
             {
               "title": "Canada",
-              "url": "/regulatory-guidelines/sender-id/canada"
+              "url": "/regulatory-guidelines/sms-sender-id/canada"
             },
             {
               "title": "Costa Rica",
-              "url": "/regulatory-guidelines/sender-id/costa-rica"
+              "url": "/regulatory-guidelines/sms-sender-id/costa-rica"
             },
             {
               "title": "Cuba",
-              "url": "/regulatory-guidelines/sender-id/cuba"
+              "url": "/regulatory-guidelines/sms-sender-id/cuba"
             },
             {
               "title": "Dominica",
-              "url": "/regulatory-guidelines/sender-id/dominica"
+              "url": "/regulatory-guidelines/sms-sender-id/dominica"
             },
             {
               "title": "Dominican Republic",
-              "url": "/regulatory-guidelines/sender-id/dominican-republic"
+              "url": "/regulatory-guidelines/sms-sender-id/dominican-republic"
             },
             {
               "title": "El Salvador",
-              "url": "/regulatory-guidelines/sender-id/el-salvador"
+              "url": "/regulatory-guidelines/sms-sender-id/el-salvador"
             },
             {
               "title": "Grenada",
-              "url": "/regulatory-guidelines/sender-id/grenada"
+              "url": "/regulatory-guidelines/sms-sender-id/grenada"
             },
             {
               "title": "Guatemala",
-              "url": "/regulatory-guidelines/sender-id/guatemala"
+              "url": "/regulatory-guidelines/sms-sender-id/guatemala"
             },
             {
               "title": "Haiti",
-              "url": "/regulatory-guidelines/sender-id/haiti"
+              "url": "/regulatory-guidelines/sms-sender-id/haiti"
             },
             {
               "title": "Honduras",
-              "url": "/regulatory-guidelines/sender-id/honduras"
+              "url": "/regulatory-guidelines/sms-sender-id/honduras"
             },
             {
               "title": "Jamaica",
-              "url": "/regulatory-guidelines/sender-id/jamaica"
+              "url": "/regulatory-guidelines/sms-sender-id/jamaica"
             },
             {
               "title": "Mexico",
-              "url": "/regulatory-guidelines/sender-id/mexico"
+              "url": "/regulatory-guidelines/sms-sender-id/mexico"
             },
             {
               "title": "Nicaragua",
-              "url": "/regulatory-guidelines/sender-id/nicaragua"
+              "url": "/regulatory-guidelines/sms-sender-id/nicaragua"
             },
             {
               "title": "Panama",
-              "url": "/regulatory-guidelines/sender-id/panama"
+              "url": "/regulatory-guidelines/sms-sender-id/panama"
             },
             {
               "title": "Saint Kitts and Nevis",
-              "url": "/regulatory-guidelines/sender-id/saint-kitts-and-nevis"
+              "url": "/regulatory-guidelines/sms-sender-id/saint-kitts-and-nevis"
             },
             {
               "title": "Saint Lucia",
-              "url": "/regulatory-guidelines/sender-id/saint-lucia"
+              "url": "/regulatory-guidelines/sms-sender-id/saint-lucia"
             },
             {
               "title": "Saint Vincent and the Grenadines",
-              "url": "/regulatory-guidelines/sender-id/saint-vincent-and-the-grenadines"
+              "url": "/regulatory-guidelines/sms-sender-id/saint-vincent-and-the-grenadines"
             },
             {
               "title": "Trinidad and Tobago",
-              "url": "/regulatory-guidelines/sender-id/trinidad-and-tobago"
+              "url": "/regulatory-guidelines/sms-sender-id/trinidad-and-tobago"
             },
             {
               "title": "United States",
-              "url": "/regulatory-guidelines/sender-id/united-states"
+              "url": "/regulatory-guidelines/sms-sender-id/united-states"
             }
           ]
         },
@@ -298,51 +298,51 @@
           "items": [
             {
               "title": "Argentina",
-              "url": "/regulatory-guidelines/sender-id/argentina"
+              "url": "/regulatory-guidelines/sms-sender-id/argentina"
             },
             {
               "title": "Bolivia",
-              "url": "/regulatory-guidelines/sender-id/bolivia"
+              "url": "/regulatory-guidelines/sms-sender-id/bolivia"
             },
             {
               "title": "Brazil",
-              "url": "/regulatory-guidelines/sender-id/brazil"
+              "url": "/regulatory-guidelines/sms-sender-id/brazil"
             },
             {
               "title": "Chile",
-              "url": "/regulatory-guidelines/sender-id/chile"
+              "url": "/regulatory-guidelines/sms-sender-id/chile"
             },
             {
               "title": "Colombia",
-              "url": "/regulatory-guidelines/sender-id/colombia"
+              "url": "/regulatory-guidelines/sms-sender-id/colombia"
             },
             {
               "title": "Ecuador",
-              "url": "/regulatory-guidelines/sender-id/ecuador"
+              "url": "/regulatory-guidelines/sms-sender-id/ecuador"
             },
             {
               "title": "Guyana",
-              "url": "/regulatory-guidelines/sender-id/guyana"
+              "url": "/regulatory-guidelines/sms-sender-id/guyana"
             },
             {
               "title": "Paraguay",
-              "url": "/regulatory-guidelines/sender-id/paraguay"
+              "url": "/regulatory-guidelines/sms-sender-id/paraguay"
             },
             {
               "title": "Peru",
-              "url": "/regulatory-guidelines/sender-id/peru"
+              "url": "/regulatory-guidelines/sms-sender-id/peru"
             },
             {
               "title": "Suriname",
-              "url": "/regulatory-guidelines/sender-id/suriname"
+              "url": "/regulatory-guidelines/sms-sender-id/suriname"
             },
             {
               "title": "Uruguay",
-              "url": "/regulatory-guidelines/sender-id/uruguay"
+              "url": "/regulatory-guidelines/sms-sender-id/uruguay"
             },
             {
               "title": "Venezuela",
-              "url": "/regulatory-guidelines/sender-id/venezuela"
+              "url": "/regulatory-guidelines/sms-sender-id/venezuela"
             }
           ]
         },
@@ -353,183 +353,183 @@
           "items": [
             {
               "title": "Afghanistan",
-              "url": "/regulatory-guidelines/sender-id/afghanistan"
+              "url": "/regulatory-guidelines/sms-sender-id/afghanistan"
             },
             {
               "title": "Armenia",
-              "url": "/regulatory-guidelines/sender-id/armenia"
+              "url": "/regulatory-guidelines/sms-sender-id/armenia"
             },
             {
               "title": "Azerbaijan",
-              "url": "/regulatory-guidelines/sender-id/azerbaijan"
+              "url": "/regulatory-guidelines/sms-sender-id/azerbaijan"
             },
             {
               "title": "Bahrain",
-              "url": "/regulatory-guidelines/sender-id/bahrain"
+              "url": "/regulatory-guidelines/sms-sender-id/bahrain"
             },
             {
               "title": "Bangladesh",
-              "url": "/regulatory-guidelines/sender-id/bangladesh"
+              "url": "/regulatory-guidelines/sms-sender-id/bangladesh"
             },
             {
               "title": "Bhutan",
-              "url": "/regulatory-guidelines/sender-id/bhutan"
+              "url": "/regulatory-guidelines/sms-sender-id/bhutan"
             },
             {
               "title": "Brunei",
-              "url": "/regulatory-guidelines/sender-id/brunei"
+              "url": "/regulatory-guidelines/sms-sender-id/brunei"
             },
             {
               "title": "Cambodia",
-              "url": "/regulatory-guidelines/sender-id/cambodia"
+              "url": "/regulatory-guidelines/sms-sender-id/cambodia"
             },
             {
               "title": "China",
-              "url": "/regulatory-guidelines/sender-id/china"
+              "url": "/regulatory-guidelines/sms-sender-id/china"
             },
             {
               "title": "Georgia",
-              "url": "/regulatory-guidelines/sender-id/georgia"
+              "url": "/regulatory-guidelines/sms-sender-id/georgia"
             },
             {
               "title": "India",
-              "url": "/regulatory-guidelines/sender-id/india"
+              "url": "/regulatory-guidelines/sms-sender-id/india"
             },
             {
               "title": "Indonesia",
-              "url": "/regulatory-guidelines/sender-id/indonesia"
+              "url": "/regulatory-guidelines/sms-sender-id/indonesia"
             },
             {
               "title": "Iran",
-              "url": "/regulatory-guidelines/sender-id/iran"
+              "url": "/regulatory-guidelines/sms-sender-id/iran"
             },
             {
               "title": "Iraq",
-              "url": "/regulatory-guidelines/sender-id/iraq"
+              "url": "/regulatory-guidelines/sms-sender-id/iraq"
             },
             {
               "title": "Israel",
-              "url": "/regulatory-guidelines/sender-id/israel"
+              "url": "/regulatory-guidelines/sms-sender-id/israel"
             },
             {
               "title": "Japan",
-              "url": "/regulatory-guidelines/sender-id/japan"
+              "url": "/regulatory-guidelines/sms-sender-id/japan"
             },
             {
               "title": "Jordan",
-              "url": "/regulatory-guidelines/sender-id/jordan"
+              "url": "/regulatory-guidelines/sms-sender-id/jordan"
             },
             {
               "title": "Kazakhstan",
-              "url": "/regulatory-guidelines/sender-id/kazakhstan"
+              "url": "/regulatory-guidelines/sms-sender-id/kazakhstan"
             },
             {
               "title": "Kuwait",
-              "url": "/regulatory-guidelines/sender-id/kuwait"
+              "url": "/regulatory-guidelines/sms-sender-id/kuwait"
             },
             {
               "title": "Kyrgyzstan",
-              "url": "/regulatory-guidelines/sender-id/kyrgyzstan"
+              "url": "/regulatory-guidelines/sms-sender-id/kyrgyzstan"
             },
             {
               "title": "Laos",
-              "url": "/regulatory-guidelines/sender-id/laos"
+              "url": "/regulatory-guidelines/sms-sender-id/laos"
             },
             {
               "title": "Lebanon",
-              "url": "/regulatory-guidelines/sender-id/lebanon"
+              "url": "/regulatory-guidelines/sms-sender-id/lebanon"
             },
             {
               "title": "Malaysia",
-              "url": "/regulatory-guidelines/sender-id/malaysia"
+              "url": "/regulatory-guidelines/sms-sender-id/malaysia"
             },
             {
               "title": "Maldives",
-              "url": "/regulatory-guidelines/sender-id/maldives"
+              "url": "/regulatory-guidelines/sms-sender-id/maldives"
             },
             {
               "title": "Mongolia",
-              "url": "/regulatory-guidelines/sender-id/mongolia"
+              "url": "/regulatory-guidelines/sms-sender-id/mongolia"
             },
             {
               "title": "Myanmar",
-              "url": "/regulatory-guidelines/sender-id/myanmar"
+              "url": "/regulatory-guidelines/sms-sender-id/myanmar"
             },
             {
               "title": "Nepal",
-              "url": "/regulatory-guidelines/sender-id/nepal"
+              "url": "/regulatory-guidelines/sms-sender-id/nepal"
             },
             {
               "title": "North Korea",
-              "url": "/regulatory-guidelines/sender-id/north-korea"
+              "url": "/regulatory-guidelines/sms-sender-id/north-korea"
             },
             {
               "title": "Oman",
-              "url": "/regulatory-guidelines/sender-id/oman"
+              "url": "/regulatory-guidelines/sms-sender-id/oman"
             },
             {
               "title": "Pakistan",
-              "url": "/regulatory-guidelines/sender-id/pakistan"
+              "url": "/regulatory-guidelines/sms-sender-id/pakistan"
             },
             {
               "title": "Philippines",
-              "url": "/regulatory-guidelines/sender-id/philippines"
+              "url": "/regulatory-guidelines/sms-sender-id/philippines"
             },
             {
               "title": "Qatar",
-              "url": "/regulatory-guidelines/sender-id/qatar"
+              "url": "/regulatory-guidelines/sms-sender-id/qatar"
             },
             {
               "title": "Saudi Arabia",
-              "url": "/regulatory-guidelines/sender-id/saudi-arabia"
+              "url": "/regulatory-guidelines/sms-sender-id/saudi-arabia"
             },
             {
               "title": "Singapore",
-              "url": "/regulatory-guidelines/sender-id/singapore"
+              "url": "/regulatory-guidelines/sms-sender-id/singapore"
             },
             {
               "title": "Sri Lanka",
-              "url": "/regulatory-guidelines/sender-id/sri-lanka"
+              "url": "/regulatory-guidelines/sms-sender-id/sri-lanka"
             },
             {
               "title": "Syria",
-              "url": "/regulatory-guidelines/sender-id/syria"
+              "url": "/regulatory-guidelines/sms-sender-id/syria"
             },
             {
               "title": "Tajikistan",
-              "url": "/regulatory-guidelines/sender-id/tajikistan"
+              "url": "/regulatory-guidelines/sms-sender-id/tajikistan"
             },
             {
               "title": "Thailand",
-              "url": "/regulatory-guidelines/sender-id/thailand"
+              "url": "/regulatory-guidelines/sms-sender-id/thailand"
             },
             {
               "title": "Timor-Leste",
-              "url": "/regulatory-guidelines/sender-id/timor-leste"
+              "url": "/regulatory-guidelines/sms-sender-id/timor-leste"
             },
             {
               "title": "Turkey",
-              "url": "/regulatory-guidelines/sender-id/turkey"
+              "url": "/regulatory-guidelines/sms-sender-id/turkey"
             },
             {
               "title": "Turkmenistan",
-              "url": "/regulatory-guidelines/sender-id/turkmenistan"
+              "url": "/regulatory-guidelines/sms-sender-id/turkmenistan"
             },
             {
               "title": "United Arab Emirates",
-              "url": "/regulatory-guidelines/sender-id/united-arab-emirates"
+              "url": "/regulatory-guidelines/sms-sender-id/united-arab-emirates"
             },
             {
               "title": "Uzbekistan",
-              "url": "/regulatory-guidelines/sender-id/uzbekistan"
+              "url": "/regulatory-guidelines/sms-sender-id/uzbekistan"
             },
             {
               "title": "Vietnam",
-              "url": "/regulatory-guidelines/sender-id/vietnam"
+              "url": "/regulatory-guidelines/sms-sender-id/vietnam"
             },
             {
               "title": "Yemen",
-              "url": "/regulatory-guidelines/sender-id/yemen"
+              "url": "/regulatory-guidelines/sms-sender-id/yemen"
             }
           ]
         },
@@ -540,203 +540,203 @@
           "items": [
             {
               "title": "Algeria",
-              "url": "/regulatory-guidelines/sender-id/algeria"
+              "url": "/regulatory-guidelines/sms-sender-id/algeria"
             },
             {
               "title": "Angola",
-              "url": "/regulatory-guidelines/sender-id/angola"
+              "url": "/regulatory-guidelines/sms-sender-id/angola"
             },
             {
               "title": "Benin",
-              "url": "/regulatory-guidelines/sender-id/benin"
+              "url": "/regulatory-guidelines/sms-sender-id/benin"
             },
             {
               "title": "Botswana",
-              "url": "/regulatory-guidelines/sender-id/botswana"
+              "url": "/regulatory-guidelines/sms-sender-id/botswana"
             },
             {
               "title": "Burkina Faso",
-              "url": "/regulatory-guidelines/sender-id/burkina-faso"
+              "url": "/regulatory-guidelines/sms-sender-id/burkina-faso"
             },
             {
               "title": "Burundi",
-              "url": "/regulatory-guidelines/sender-id/burundi"
+              "url": "/regulatory-guidelines/sms-sender-id/burundi"
             },
             {
               "title": "Cameroon",
-              "url": "/regulatory-guidelines/sender-id/cameroon"
+              "url": "/regulatory-guidelines/sms-sender-id/cameroon"
             },
             {
               "title": "Cape Verde",
-              "url": "/regulatory-guidelines/sender-id/cape-verde"
+              "url": "/regulatory-guidelines/sms-sender-id/cape-verde"
             },
             {
               "title": "Central African Republic",
-              "url": "/regulatory-guidelines/sender-id/central-african-republic"
+              "url": "/regulatory-guidelines/sms-sender-id/central-african-republic"
             },
             {
               "title": "Chad",
-              "url": "/regulatory-guidelines/sender-id/chad"
+              "url": "/regulatory-guidelines/sms-sender-id/chad"
             },
             {
               "title": "Comoros",
-              "url": "/regulatory-guidelines/sender-id/comoros"
+              "url": "/regulatory-guidelines/sms-sender-id/comoros"
             },
             {
               "title": "Djibouti",
-              "url": "/regulatory-guidelines/sender-id/djibouti"
+              "url": "/regulatory-guidelines/sms-sender-id/djibouti"
             },
             {
               "title": "Egypt",
-              "url": "/regulatory-guidelines/sender-id/egypt"
+              "url": "/regulatory-guidelines/sms-sender-id/egypt"
             },
             {
               "title": "Equatorial Guinea",
-              "url": "/regulatory-guidelines/sender-id/equatorial-guinea"
+              "url": "/regulatory-guidelines/sms-sender-id/equatorial-guinea"
             },
             {
               "title": "Eritrea",
-              "url": "/regulatory-guidelines/sender-id/eritrea"
+              "url": "/regulatory-guidelines/sms-sender-id/eritrea"
             },
             {
               "title": "Eswatini",
-              "url": "/regulatory-guidelines/sender-id/eswatini"
+              "url": "/regulatory-guidelines/sms-sender-id/eswatini"
             },
             {
               "title": "Ethiopia",
-              "url": "/regulatory-guidelines/sender-id/ethiopia"
+              "url": "/regulatory-guidelines/sms-sender-id/ethiopia"
             },
             {
               "title": "Gabon",
-              "url": "/regulatory-guidelines/sender-id/gabon"
+              "url": "/regulatory-guidelines/sms-sender-id/gabon"
             },
             {
               "title": "Gambia",
-              "url": "/regulatory-guidelines/sender-id/gambia"
+              "url": "/regulatory-guidelines/sms-sender-id/gambia"
             },
             {
               "title": "Ghana",
-              "url": "/regulatory-guidelines/sender-id/ghana"
+              "url": "/regulatory-guidelines/sms-sender-id/ghana"
             },
             {
               "title": "Guinea",
-              "url": "/regulatory-guidelines/sender-id/guinea"
+              "url": "/regulatory-guidelines/sms-sender-id/guinea"
             },
             {
               "title": "Guinea-Bissau",
-              "url": "/regulatory-guidelines/sender-id/guinea-bissau"
+              "url": "/regulatory-guidelines/sms-sender-id/guinea-bissau"
             },
             {
               "title": "Kenya",
-              "url": "/regulatory-guidelines/sender-id/kenya"
+              "url": "/regulatory-guidelines/sms-sender-id/kenya"
             },
             {
               "title": "Lesotho",
-              "url": "/regulatory-guidelines/sender-id/lesotho"
+              "url": "/regulatory-guidelines/sms-sender-id/lesotho"
             },
             {
               "title": "Liberia",
-              "url": "/regulatory-guidelines/sender-id/liberia"
+              "url": "/regulatory-guidelines/sms-sender-id/liberia"
             },
             {
               "title": "Libya",
-              "url": "/regulatory-guidelines/sender-id/libya"
+              "url": "/regulatory-guidelines/sms-sender-id/libya"
             },
             {
               "title": "Madagascar",
-              "url": "/regulatory-guidelines/sender-id/madagascar"
+              "url": "/regulatory-guidelines/sms-sender-id/madagascar"
             },
             {
               "title": "Malawi",
-              "url": "/regulatory-guidelines/sender-id/malawi"
+              "url": "/regulatory-guidelines/sms-sender-id/malawi"
             },
             {
               "title": "Mali",
-              "url": "/regulatory-guidelines/sender-id/mali"
+              "url": "/regulatory-guidelines/sms-sender-id/mali"
             },
             {
               "title": "Mauritania",
-              "url": "/regulatory-guidelines/sender-id/mauritania"
+              "url": "/regulatory-guidelines/sms-sender-id/mauritania"
             },
             {
               "title": "Mauritius",
-              "url": "/regulatory-guidelines/sender-id/mauritius"
+              "url": "/regulatory-guidelines/sms-sender-id/mauritius"
             },
             {
               "title": "Morocco",
-              "url": "/regulatory-guidelines/sender-id/morocco"
+              "url": "/regulatory-guidelines/sms-sender-id/morocco"
             },
             {
               "title": "Mozambique",
-              "url": "/regulatory-guidelines/sender-id/mozambique"
+              "url": "/regulatory-guidelines/sms-sender-id/mozambique"
             },
             {
               "title": "Namibia",
-              "url": "/regulatory-guidelines/sender-id/namibia"
+              "url": "/regulatory-guidelines/sms-sender-id/namibia"
             },
             {
               "title": "Niger",
-              "url": "/regulatory-guidelines/sender-id/niger"
+              "url": "/regulatory-guidelines/sms-sender-id/niger"
             },
             {
               "title": "Nigeria",
-              "url": "/regulatory-guidelines/sender-id/nigeria"
+              "url": "/regulatory-guidelines/sms-sender-id/nigeria"
             },
             {
               "title": "Rwanda",
-              "url": "/regulatory-guidelines/sender-id/rwanda"
+              "url": "/regulatory-guidelines/sms-sender-id/rwanda"
             },
             {
               "title": "Senegal",
-              "url": "/regulatory-guidelines/sender-id/senegal"
+              "url": "/regulatory-guidelines/sms-sender-id/senegal"
             },
             {
               "title": "Seychelles",
-              "url": "/regulatory-guidelines/sender-id/seychelles"
+              "url": "/regulatory-guidelines/sms-sender-id/seychelles"
             },
             {
               "title": "Sierra Leone",
-              "url": "/regulatory-guidelines/sender-id/sierra-leone"
+              "url": "/regulatory-guidelines/sms-sender-id/sierra-leone"
             },
             {
               "title": "Somalia",
-              "url": "/regulatory-guidelines/sender-id/somalia"
+              "url": "/regulatory-guidelines/sms-sender-id/somalia"
             },
             {
               "title": "South Africa",
-              "url": "/regulatory-guidelines/sender-id/south-africa"
+              "url": "/regulatory-guidelines/sms-sender-id/south-africa"
             },
             {
               "title": "South Sudan",
-              "url": "/regulatory-guidelines/sender-id/south-sudan"
+              "url": "/regulatory-guidelines/sms-sender-id/south-sudan"
             },
             {
               "title": "Sudan",
-              "url": "/regulatory-guidelines/sender-id/sudan"
+              "url": "/regulatory-guidelines/sms-sender-id/sudan"
             },
             {
               "title": "Tanzania",
-              "url": "/regulatory-guidelines/sender-id/tanzania"
+              "url": "/regulatory-guidelines/sms-sender-id/tanzania"
             },
             {
               "title": "Togo",
-              "url": "/regulatory-guidelines/sender-id/togo"
+              "url": "/regulatory-guidelines/sms-sender-id/togo"
             },
             {
               "title": "Tunisia",
-              "url": "/regulatory-guidelines/sender-id/tunisia"
+              "url": "/regulatory-guidelines/sms-sender-id/tunisia"
             },
             {
               "title": "Uganda",
-              "url": "/regulatory-guidelines/sender-id/uganda"
+              "url": "/regulatory-guidelines/sms-sender-id/uganda"
             },
             {
               "title": "Zambia",
-              "url": "/regulatory-guidelines/sender-id/zambia"
+              "url": "/regulatory-guidelines/sms-sender-id/zambia"
             },
             {
               "title": "Zimbabwe",
-              "url": "/regulatory-guidelines/sender-id/zimbabwe"
+              "url": "/regulatory-guidelines/sms-sender-id/zimbabwe"
             }
           ]
         },
@@ -747,59 +747,59 @@
           "items": [
             {
               "title": "Australia",
-              "url": "/regulatory-guidelines/sender-id/australia"
+              "url": "/regulatory-guidelines/sms-sender-id/australia"
             },
             {
               "title": "Fiji",
-              "url": "/regulatory-guidelines/sender-id/fiji"
+              "url": "/regulatory-guidelines/sms-sender-id/fiji"
             },
             {
               "title": "Kiribati",
-              "url": "/regulatory-guidelines/sender-id/kiribati"
+              "url": "/regulatory-guidelines/sms-sender-id/kiribati"
             },
             {
               "title": "Marshall Islands",
-              "url": "/regulatory-guidelines/sender-id/marshall-islands"
+              "url": "/regulatory-guidelines/sms-sender-id/marshall-islands"
             },
             {
               "title": "Micronesia",
-              "url": "/regulatory-guidelines/sender-id/micronesia"
+              "url": "/regulatory-guidelines/sms-sender-id/micronesia"
             },
             {
               "title": "Nauru",
-              "url": "/regulatory-guidelines/sender-id/nauru"
+              "url": "/regulatory-guidelines/sms-sender-id/nauru"
             },
             {
               "title": "New Zealand",
-              "url": "/regulatory-guidelines/sender-id/new-zealand"
+              "url": "/regulatory-guidelines/sms-sender-id/new-zealand"
             },
             {
               "title": "Palau",
-              "url": "/regulatory-guidelines/sender-id/palau"
+              "url": "/regulatory-guidelines/sms-sender-id/palau"
             },
             {
               "title": "Papua New Guinea",
-              "url": "/regulatory-guidelines/sender-id/papua-new-guinea"
+              "url": "/regulatory-guidelines/sms-sender-id/papua-new-guinea"
             },
             {
               "title": "Samoa",
-              "url": "/regulatory-guidelines/sender-id/samoa"
+              "url": "/regulatory-guidelines/sms-sender-id/samoa"
             },
             {
               "title": "Solomon Islands",
-              "url": "/regulatory-guidelines/sender-id/solomon-islands"
+              "url": "/regulatory-guidelines/sms-sender-id/solomon-islands"
             },
             {
               "title": "Tonga",
-              "url": "/regulatory-guidelines/sender-id/tonga"
+              "url": "/regulatory-guidelines/sms-sender-id/tonga"
             },
             {
               "title": "Tuvalu",
-              "url": "/regulatory-guidelines/sender-id/tuvalu"
+              "url": "/regulatory-guidelines/sms-sender-id/tuvalu"
             },
             {
               "title": "Vanuatu",
-              "url": "/regulatory-guidelines/sender-id/vanuatu"
+              "url": "/regulatory-guidelines/sms-sender-id/vanuatu"
             }
           ]
         }

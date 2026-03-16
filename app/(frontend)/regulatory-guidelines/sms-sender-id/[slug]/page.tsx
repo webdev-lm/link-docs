@@ -6,6 +6,7 @@ import LocaleSummary from './_components/LocaleSummary'
 import OperatorTable from './_components/OperatorTable'
 import AvailableShortcodes from './_components/AvailableShortcodes'
 import SenderIdRegulations from './_components/SenderIdRegulations'
+import UpdateTimestamp from './_components/UpdateTimestamp'
 import { RichText } from '@/_components/_atoms/_richtext/RichText'
 
 interface PageProps {
@@ -39,6 +40,7 @@ interface Guideline {
     requirementsSelection: string
   }
   description: string
+  updatedAt: string
 }
 
 export default async function GuidelineSlugPage({ params }: PageProps) {
@@ -62,6 +64,8 @@ export default async function GuidelineSlugPage({ params }: PageProps) {
       features:true,
       regulatoryRequirements:true,
       description:true,
+      createdAt:true,
+      updatedAt:true,
     },
     limit: 1,
   })
@@ -71,10 +75,12 @@ export default async function GuidelineSlugPage({ params }: PageProps) {
   }
 
   const guideline = result.docs[0] as Guideline
-  console.log(guideline)
   return (
     <div className='typo-app max-w-screen-lg mx-auto space-y-8'>
-      <h1>{guideline.title}</h1>
+      <div className="flex flex-wrap items-baseline justify-between gap-4">
+        <h1>{guideline.title}</h1>
+        <UpdateTimestamp updatedAt={guideline.updatedAt} />
+      </div>
       <LocaleSummary localeSummary={guideline.localeSummary as any} />
       <SenderIdRegulations regulatoryRequirements={guideline.regulatoryRequirements as any} />
       <RichText data={guideline.description as any} />

@@ -4,7 +4,7 @@ import { RegionGrid } from './RegionGrid'
 
 const config = regulatoryConfig as GenericSidebarConfig
 
-const SENDER_ID_NAV_ID = 'sender-id'
+const SENDER_ID_NAV_ID = 'sms-sender-id'
 
 /**
  * Overview for the Sender ID index page: reads regulatory-guidelines.json,
