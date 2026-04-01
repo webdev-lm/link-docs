@@ -1,0 +1,26 @@
+{
+    "header": "MyLINK Portal 2.0",
+    "nav": [
+        {
+            "groupLabel": "Welcome",
+            "id": "overview",
+            "items": [
+                {
+                    "title": "Getting Started",
+                    "url": "#",
+                    "isActive": false,
+                    "items": [
+                        {
+                            "title": "Accessing the Portal",
+                            "url": "/product-guides/mylink-portal/accessing-the-portal"
+                        },
+                        {
+                            "title": "Accessing the Portal",
+                            "url": "/product-guides/mylink-portal/accessing-the-portal"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

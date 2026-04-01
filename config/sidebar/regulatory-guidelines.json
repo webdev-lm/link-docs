@@ -185,10 +185,6 @@
             {
               "title": "United Kingdom",
               "url": "/regulatory-guidelines/sms-sender-id/united-kingdom"
-            },
-            {
-              "title": "Vatican City",
-              "url": "/regulatory-guidelines/sms-sender-id/vatican-city"
             }
           ]
         },
@@ -287,7 +283,7 @@
             },
             {
               "title": "United States",
-              "url": "/regulatory-guidelines/sms-sender-id/united-states"
+              "url": "/regulatory-guidelines/sms-sender-id/usa-united-states-of-america"
             }
           ]
         },
@@ -376,10 +372,6 @@
               "url": "/regulatory-guidelines/sms-sender-id/bhutan"
             },
             {
-              "title": "Brunei",
-              "url": "/regulatory-guidelines/sms-sender-id/brunei"
-            },
-            {
               "title": "Cambodia",
               "url": "/regulatory-guidelines/sms-sender-id/cambodia"
             },
@@ -459,10 +451,7 @@
               "title": "Nepal",
               "url": "/regulatory-guidelines/sms-sender-id/nepal"
             },
-            {
-              "title": "North Korea",
-              "url": "/regulatory-guidelines/sms-sender-id/north-korea"
-            },
+
             {
               "title": "Oman",
               "url": "/regulatory-guidelines/sms-sender-id/oman"
@@ -517,7 +506,7 @@
             },
             {
               "title": "United Arab Emirates",
-              "url": "/regulatory-guidelines/sms-sender-id/united-arab-emirates"
+              "url": "/regulatory-guidelines/sms-sender-id/uae-united-arab-emirates"
             },
             {
               "title": "Uzbekistan",
@@ -597,10 +586,6 @@
             {
               "title": "Eritrea",
               "url": "/regulatory-guidelines/sms-sender-id/eritrea"
-            },
-            {
-              "title": "Eswatini",
-              "url": "/regulatory-guidelines/sms-sender-id/eswatini"
             },
             {
               "title": "Ethiopia",

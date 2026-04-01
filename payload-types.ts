@@ -70,6 +70,7 @@ export interface Config {
     users: User;
     media: Media;
     guidelines: Guideline;
+    pguide: Pguide;
     'payload-kv': PayloadKv;
     'payload-folders': FolderInterface;
     'payload-locked-documents': PayloadLockedDocument;
@@ -78,13 +79,14 @@ export interface Config {
   };
   collectionsJoins: {
     'payload-folders': {
-      documentsAndFolders: 'payload-folders' | 'guidelines';
+      documentsAndFolders: 'payload-folders' | 'guidelines' | 'pguide';
     };
   };
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     guidelines: GuidelinesSelect<false> | GuidelinesSelect<true>;
+    pguide: PguideSelect<false> | PguideSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-folders': PayloadFoldersSelect<false> | PayloadFoldersSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -239,11 +241,150 @@ export interface FolderInterface {
           relationTo?: 'guidelines';
           value: string | Guideline;
         }
+      | {
+          relationTo?: 'pguide';
+          value: string | Pguide;
+        }
     )[];
     hasNextPage?: boolean;
     totalDocs?: number;
   };
-  folderType?: 'guidelines'[] | null;
+  folderType?: ('guidelines' | 'pguide')[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pguide".
+ */
+export interface Pguide {
+  id: string;
+  title: string;
+  /**
+   * Auto-generated from title, but can be edited manually
+   */
+  slug?: string | null;
+  meta_fields: {
+    /**
+     * The title to use for the SEO meta tag.
+     */
+    seo_title: string;
+    /**
+     * The description to use for the SEO meta tag.
+     */
+    seo_description: string;
+    /**
+     * The title to use for the Open Graph meta tag. If not provided, the seo_title will be used.
+     */
+    og_title?: string | null;
+    /**
+     * The description to use for the Open Graph meta tag. If not provided, the seo_description will be used.
+     */
+    og_description?: string | null;
+    /**
+     * The image to use for the Open Graph image. If not provided, a default image will be used.
+     */
+    og_image?: (string | null) | Media;
+  };
+  internal_search: {
+    /**
+     * The title to use to display internal search results.
+     */
+    internal_search_title: string;
+    /**
+     * The description to use to display internal search results.
+     */
+    internal_search_description: string;
+    /**
+     * The keywords to use to optimize the internal search engine. Use very specific keywords or parts of text you want this content to rank for.
+     */
+    internal_search_keywords: string;
+  };
+  content?:
+    | (
+        | {
+            richText?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'richText';
+          }
+        | {
+            image: string | Media;
+            /**
+             * The alt text to use for the image.
+             */
+            alt: string;
+            /**
+             * The caption to use for the image.
+             */
+            caption?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'image-block';
+          }
+        | {
+            note: string;
+            'note-type': 'suggestion' | 'note' | 'warning' | 'danger';
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'note-block';
+          }
+        | {
+            /**
+             * The markdown table to use for the article.
+             *                 Use the following format:
+             *                 | Header 1 | Header 2 | Header 3 |
+             *                 |----------|----------|----------|
+             *                 | Cell 1   | Cell 2   | Cell 3   |
+             *                 | Cell 4   | Cell 5   | Cell 6   |
+             *                 | Cell 7   | Cell 8   | Cell 9   |
+             *
+             */
+            'markdown-table': string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'markdown-table';
+          }
+        | {
+            /**
+             * The title to use for the related articles block.
+             */
+            'related-articles-title': string;
+            'related-articles': (
+              | {
+                  relationTo: 'pguide';
+                  value: string | Pguide;
+                }
+              | {
+                  relationTo: 'guidelines';
+                  value: string | Guideline;
+                }
+            )[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'related-articles-block';
+          }
+      )[]
+    | null;
+  'previous-next-navigation'?: {
+    'previous-guide'?: (string | null) | Pguide;
+    'next-guide'?: (string | null) | Pguide;
+  };
+  folder?: (string | null) | FolderInterface;
   updatedAt: string;
   createdAt: string;
 }
@@ -282,6 +423,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'guidelines';
         value: string | Guideline;
+      } | null)
+    | ({
+        relationTo: 'pguide';
+        value: string | Pguide;
       } | null)
     | ({
         relationTo: 'payload-kv';
@@ -411,6 +556,82 @@ export interface GuidelinesSelect<T extends boolean = true> {
         dedicatedShortcodes?: T;
         sharedShortcodes?: T;
         longnumbers?: T;
+      };
+  folder?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pguide_select".
+ */
+export interface PguideSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  meta_fields?:
+    | T
+    | {
+        seo_title?: T;
+        seo_description?: T;
+        og_title?: T;
+        og_description?: T;
+        og_image?: T;
+      };
+  internal_search?:
+    | T
+    | {
+        internal_search_title?: T;
+        internal_search_description?: T;
+        internal_search_keywords?: T;
+      };
+  content?:
+    | T
+    | {
+        richText?:
+          | T
+          | {
+              richText?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'image-block'?:
+          | T
+          | {
+              image?: T;
+              alt?: T;
+              caption?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'note-block'?:
+          | T
+          | {
+              note?: T;
+              'note-type'?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'markdown-table'?:
+          | T
+          | {
+              'markdown-table'?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'related-articles-block'?:
+          | T
+          | {
+              'related-articles-title'?: T;
+              'related-articles'?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  'previous-next-navigation'?:
+    | T
+    | {
+        'previous-guide'?: T;
+        'next-guide'?: T;
       };
   folder?: T;
   updatedAt?: T;

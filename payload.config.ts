@@ -10,6 +10,8 @@ import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Guideline } from './collections/Guideline'
+import { ProductGuide } from './collections/ProductGuide'
+
 import { AzureTransport } from './lib/azure-transport'
 
 const filename = fileURLToPath(import.meta.url)
@@ -22,7 +24,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Guideline],
+  collections: [Users, Media, Guideline, ProductGuide],
   folders: {
     debug: true, // optional
     fieldName: 'folder', // optional
